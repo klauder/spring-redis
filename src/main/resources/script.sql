@@ -8,7 +8,7 @@ BEGIN
 	DECLARE	v_counter INT;
 	DECLARE	registros INT;
 	DECLARE	v_max INT;
-    set v_max = 3;
+    set v_max = 300000;
     SET v_counter=1;
     set registros=0;
 
