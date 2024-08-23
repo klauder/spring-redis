@@ -1,6 +1,6 @@
-DROP TABLE EMPRESA;
+DROP TABLE empresa;
 
-CREATE TABLE IF NOT EXISTS empresa (id INT PRIMARY KEY, nome varchar(20), data_criacao timestamp);
+CREATE TABLE empresa (id INT PRIMARY KEY, nome varchar(20), data_criacao timestamp);
 
 CREATE DEFINER=`user_cache`@`localhost` FUNCTION `populaDB`() RETURNS int
     DETERMINISTIC
@@ -30,5 +30,3 @@ BEGIN
 END;
 
 select populaDb();
-
-SELECT * FROM empresa limit 10;
