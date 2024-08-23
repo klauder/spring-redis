@@ -16,7 +16,7 @@ public class EmpresaService {
 
     @Cacheable("empresas")
     public List<Empresa> findAllWithCache() {
-        return this.findAll();
+        return findAll();
     }
 
     public List<Empresa> findAll() {

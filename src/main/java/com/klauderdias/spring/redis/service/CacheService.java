@@ -17,12 +17,14 @@ public class CacheService {
     @Autowired
     private EmpresaService empresaService;
 
+    //Manual way to clean the cache by cacheName
     public void evictAllCacheValues(String cacheName) {
         Objects.requireNonNull(cacheManager.getCache(cacheName)).clear();
     }
 
+    //Manual way to update the cache("empresas")
     @CachePut("empresas")
-    public List<Empresa> atualizarCacheEmpresas() {
+    public List<Empresa> manualUpdateCacheEmpresas() {
         return empresaService.findAll();
     }
 

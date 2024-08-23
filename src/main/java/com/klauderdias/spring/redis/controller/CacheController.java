@@ -18,6 +18,6 @@ public class CacheController {
 
     @PutMapping
     public void atualizar() {
-        cacheService.atualizarCacheEmpresas();
+        cacheService.manualUpdateCacheEmpresas();
     }
 }
