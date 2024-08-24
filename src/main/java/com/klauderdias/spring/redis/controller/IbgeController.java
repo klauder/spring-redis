@@ -20,8 +20,7 @@ public class IbgeController {
 
     @GetMapping
     public ResponseEntity<List<IbgeResponse>> findAllCities(@RequestParam String estado) {
-        List<IbgeResponse> list = ibgeService.findAllCities(estado);
-        return ResponseEntity.ok(list);
+        return ResponseEntity.ok(ibgeService.findAllCities(estado));
     }
 
 }
